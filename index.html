@@ -14,7 +14,15 @@
     <div id="dos" style="width: 640px; height: 400px;"></div>
 
     <script>
-      Dos(document.getElementById("dos"), {}).run("Doom.zip");
+      Dos(document.getElementById("dos"), {
+        url: "Doom.zip",
+        dowboxConf: "
+          [autoexec]
+          mount c .
+          c:
+          DOOM.EXE
+          exit"
+      });
     </script>
   </body>
 </html>
